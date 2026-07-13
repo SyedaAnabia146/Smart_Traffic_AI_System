@@ -48,7 +48,33 @@ st.markdown("""
 # Application Header
 st.title("🚦 Smart Traffic Signal Controller")
 st.markdown("### *AI-Driven Stochastic Intersection Simulation Engine*")
-st.caption("Developed by: Syeda Anabia | Roll No: 2K23/CSE/146 | Subject: Artificial Intelligence Lab")
+
+# Group Members Details Card (Matches the Premium UI)
+st.markdown("""
+    <div style="background-color: #1E293B; padding: 15px; border-radius: 8px; border: 1px solid #475569; margin-bottom: 20px; max-width: 600px;">
+        <h4 style="color: #38BDF8; margin: 0 0 10px 0;">👥 Project Group Members</h4>
+        <table style="width: 100%; border-collapse: collapse; color: #E2E8F0;">
+            <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 6px; font-weight: bold; color: #38BDF8;">Syeda Anabia (Team Leader)</td>
+                <td style="padding: 6px; text-align: right; font-family: monospace; color: #38BDF8;">2K23/CSE/146</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 6px;">Kashaf</td>
+                <td style="padding: 6px; text-align: right; font-family: monospace;">2K23/CSE/68</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #334155;">
+                <td style="padding: 6px;">Afia</td>
+                <td style="padding: 6px; text-align: right; font-family: monospace;">2K23/CSE/20</td>
+            </tr>
+            <tr>
+                <td style="padding: 6px;">Wareesha</td>
+                <td style="padding: 6px; text-align: right; font-family: monospace;">2K23/CSE/153</td>
+            </tr>
+        </table>
+        <p style="margin: 10px 0 0 0; font-size: 13px; color: #94A3B8; text-align: center;"><b>AI Final Project</b> | BSCS (2K23-Batch) | AI Lab</p>
+    </div>
+""", unsafe_allow_html=True)
+
 st.write("---")
 
 # Sidebar Controls for Presentation Flexibility
