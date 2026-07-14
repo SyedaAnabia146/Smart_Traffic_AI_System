@@ -16,3 +16,8 @@ WEIGHT_RISK = 0.3
 
 # Simulation Settings
 SENSOR_NOISE_FACTOR = 0.15  # 15% chance of camera blur/partial visibility
+
+# Custom simulation thresholds
+MAX_VEHICLE_LIMIT = 150
+CONGESTION_THRESHOLD = 0.8
+RETRY_ATTEMPTS = 3
