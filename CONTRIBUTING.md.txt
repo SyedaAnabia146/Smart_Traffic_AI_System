@@ -1,0 +1,8 @@
+# Contributing to Smart Traffic AI System
+
+We welcome all contributions! Here is how you can help:
+- Report bugs by creating Github Issues.
+- Propose new features for traffic simulation.
+- Improve documentation and code comments.
+
+Please make sure to test your code before pushing!
