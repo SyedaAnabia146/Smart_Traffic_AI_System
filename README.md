@@ -10,5 +10,6 @@ An AI-based smart traffic management system designed to optimize traffic flow an
 ## 👥 Developers
 - Syeda Anabia
 - Afia Sualeh
+- Wareesha
 Updated by Kashaf Jawaid
 
