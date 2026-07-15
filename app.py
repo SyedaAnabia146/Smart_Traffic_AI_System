@@ -236,6 +236,8 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
                           barmode="group", title="AI Allocated Green Phase Duration per Lane",
                           labels={"Allocated_Green_Time": "Green Light Window (s)"},
                           color_discrete_map={"Yes": "#E11D48", "No": "#3B82F6"})
+ 
+
         chart_cols[0].plotly_chart(fig_time, use_container_width=True)
         
         # Chart 2: Utility Function Convergence Plot
@@ -248,3 +250,9 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
         # Presenting raw logged telemetry files
         st.subheader("📋 System Telemetry Captured Dataset")
         st.dataframe(df_recent, use_container_width=True)
+            # Sidebar info
+st.sidebar.title("About Project")
+st.sidebar.info(
+    "This Smart Traffic AI System is designed to optimize traffic light timings "
+    "using advanced computer vision and density estimation."
+)
