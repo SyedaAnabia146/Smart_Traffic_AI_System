@@ -307,3 +307,9 @@ def predict_traffic_density(current_count, peak_hour=False):
 # Dashboard display logic
 prediction = predict_traffic_density(current_count=45, peak_hour=True)
 print(f"AI Prediction Status: {prediction}")
+    # Sidebar info
+st.sidebar.title("About Project")
+st.sidebar.info(
+    "This Smart Traffic AI System is designed to optimize traffic light timings "
+    "using advanced computer vision and density estimation."
+)
