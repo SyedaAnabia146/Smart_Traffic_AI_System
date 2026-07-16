@@ -12,4 +12,9 @@ An AI-based smart traffic management system designed to optimize traffic flow an
 - Afia Sualeh
 - Wareesha
 Updated by Kashaf Jawaid
+## 🛠️ How to Run
+1. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   streamlit run app.py
 
