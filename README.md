@@ -23,4 +23,8 @@ Updated by Kashaf Jawaid
    ```bash
    pip install -r requirements.txt
    streamlit run app.py
+ ## 🔮 Future Scope
+- Integration with real-time CCTV camera feeds.
+- Deploying the model on cloud platforms (like Streamlit Community Cloud).
+- Adding GPS-based dynamic route suggestions.
 
