@@ -256,3 +256,22 @@ st.sidebar.info(
     "This Smart Traffic AI System is designed to optimize traffic light timings "
     "using advanced computer vision and density estimation."
 )
+# ---- AI Prediction Model Section ----
+def predict_traffic_density(current_count, peak_hour=False):
+    """
+    AI algorithm to predict traffic congestion level based on current vehicle count.
+    """
+    base_threshold = 50
+    if peak_hour:
+        base_threshold = 30 # Peak hours me congestion jaldi hoti hai
+
+    if current_count > base_threshold:
+        return "High Congestion (Heavy Traffic)"
+    elif current_count > (base_threshold / 2):
+        return "Moderate Traffic"
+    else:
+        return "Clear (Low Traffic)"
+
+# Dashboard display logic
+prediction = predict_traffic_density(current_count=45, peak_hour=True)
+print(f"AI Prediction Status: {prediction}")
