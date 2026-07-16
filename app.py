@@ -20,6 +20,8 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
+# --- Welcome Subtitle (Aapki Commit) ---
+st.markdown("### 🚦 Welcome! Optimize and monitor traffic density in real-time.")
 
 # Custom Glassmorphism CSS styling to impress the evaluator
 # Custom Glassmorphism & Custom Enhanced CSS styling (Commit 2 changes)
