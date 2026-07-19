@@ -25,7 +25,6 @@ class SmartTrafficAgent:
         # 2. Dynamic Rule Engine based on Traffic Density
         else:
             # Compensating for Partial Observability (Sensor Noise)
-            # Agar camera blur hai, toh agent hidden cars ko compensate karne ke liye math apply karega
             estimated_q = observed_q
             if is_blurred:
                 estimated_q = int(observed_q * 1.35) # Estimating 35% more traffic hidden from view
