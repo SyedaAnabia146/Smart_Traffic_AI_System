@@ -1,8 +1,7 @@
-# app.py
 import sys
 import os
 
-# System pipeline ko dynamically current folder ka path batane ke liye (Foolproof Fix)
+# System pipeline to dynamically current folder (Foolproof Fix)
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 import streamlit as st
@@ -23,25 +22,96 @@ st.set_page_config(
 # --- Welcome Subtitle (Aapki Commit) ---
 st.markdown("### 🚦 Welcome! Optimize and monitor traffic density in real-time.")
 
+<<<<<<< HEAD
 # Custom Glassmorphism CSS styling to impress the evaluator
 # Custom Glassmorphism & Custom Enhanced CSS styling (Commit 2 changes)
+=======
+# Custom Premium Light Theme Grid Styling (Forceful Button Visibility Fix)
+>>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
 st.markdown("""
     <style>
+    /* Main body changes to elegant light slate */
+    .stApp {
+        background-color: #F1F5F9;
+        color: #1E293B;
+    }
+    /* Sidebars clean color tuning */
+    [data-testid="stSidebar"] {
+        background-color: #E2E8F0 !important;
+    }
+    
+    /* 🚫 Removing the dark header/black bar completely from the top */
+    [data-testid="stHeader"] {
+        background-color: #F1F5F9 !important;
+        box-shadow: none !important;
+    }
+    header {
+        background-color: #F1F5F9 !important;
+    }
+    div[data-testid="stDecoration"] {
+        background-image: none !important;
+        background-color: transparent !important;
+    }
+
+    /* 👁️ FORCE FULL VISIBILITY ON SIDEBAR TOGGLE BUTTONS */
+    button[data-testid="stSidebarCollapseButton"],
+    [data-testid="stSidebarCollapseButton"] button,
+    [data-testid="stHeader"] button {
+        color: #000000 !important;
+        fill: #000000 !important;
+        background-color: #CBD5E1 !important;
+        border: 2px solid #94A3B8 !important;
+        border-radius: 8px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: inline-flex !important;
+    }
+    
+    /* Target the SVG icon inside the button directly to ensure it isn't white */
+    button[data-testid="stSidebarCollapseButton"] svg,
+    [data-testid="stHeader"] svg {
+        fill: #000000 !important;
+        color: #000000 !important;
+    }
+
+    /* 🚫 Hiding the horizontal line in sidebar completely */
+    [data-testid="stSidebar"] hr {
+        border-color: transparent !important;
+        margin: 10px 0 !important;
+    }
+    
+    /* Fixing LaTeX / Katex text color to be visible on light background */
+    .katex {
+        color: #0F172A !important;
+        font-size: 1.15em;
+    }
     .metric-box {
-        background-color: #1E293B;
+        background-color: #FFFFFF;
         padding: 20px;
         border-radius: 12px;
-        border: 1px solid #334155;
+        border: 1px solid #CBD5E1;
         text-align: center;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
     .lane-card {
-        background: rgba(30, 41, 59, 0.7);
+        background: #FFFFFF;
         padding: 15px;
         border-radius: 10px;
         margin-bottom: 10px;
+        border: 1px solid #E2E8F0;
         border-left: 5px solid #64748B;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        color: #334155;
     }
+    .lane-green { border-left: 6px solid #10B981 !important; background-color: rgba(16, 185, 129, 0.08); }
+    .lane-yellow { border-left: 6px solid #F59E0B !important; background-color: rgba(245, 158, 11, 0.08); }
+    .lane-red { border-left: 6px solid #EF4444 !important; background-color: rgba(239, 68, 68, 0.08); }
+    
+    /* Fix text contrast labels for Light Mode */
+    h1, h2, h3, h4, h5, h6, p {
+        color: #0F172A !important;
+    }
+<<<<<<< HEAD
     .lane-green { border-left: 6px solid #10B981 !important; background-color: rgba(16, 185, 129, 0.05); }
     .lane-yellow { border-left: 6px solid #F59E0B !important; background-color: rgba(245, 158, 11, 0.05); }
     .lane-red { border-left: 6px solid #EF4444 !important; background-color: rgba(239, 68, 68, 0.05); }
@@ -63,6 +133,8 @@ st.markdown("""
         padding: 15px;
         margin-bottom: 10px;
     }
+=======
+>>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
     </style>
 """, unsafe_allow_html=True)
 
@@ -72,18 +144,18 @@ st.markdown("### *AI-Driven Stochastic Intersection Simulation Engine*")
 
 # Group Members Details Card (Matches the Premium UI)
 st.markdown("""
-    <div style="background-color: #1E293B; padding: 15px; border-radius: 8px; border: 1px solid #475569; margin-bottom: 20px; max-width: 600px;">
-        <h4 style="color: #38BDF8; margin: 0 0 10px 0;">👥 Project Group Members</h4>
-        <table style="width: 100%; border-collapse: collapse; color: #E2E8F0;">
-            <tr style="border-bottom: 1px solid #334155;">
-                <td style="padding: 6px; font-weight: bold; color: #38BDF8;">Syeda Anabia (Team Leader)</td>
-                <td style="padding: 6px; text-align: right; font-family: monospace; color: #38BDF8;">2K23/CSE/146</td>
+    <div style="background-color: #FFFFFF; padding: 15px; border-radius: 8px; border: 1px solid #CBD5E1; margin-bottom: 20px; max-width: 600px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h4 style="color: #0284C7; margin: 0 0 10px 0; font-weight: bold;">👥 Project Group Members</h4>
+        <table style="width: 100%; border-collapse: collapse; color: #334155;">
+            <tr style="border-bottom: 1px solid #E2E8F0;">
+                <td style="padding: 6px; font-weight: bold; color: #0284C7;">Syeda Anabia (Team Leader)</td>
+                <td style="padding: 6px; text-align: right; font-family: monospace; color: #0284C7; font-weight: bold;">2K23/CSE/146</td>
             </tr>
-            <tr style="border-bottom: 1px solid #334155;">
+            <tr style="border-bottom: 1px solid #E2E8F0;">
                 <td style="padding: 6px;">Kashaf</td>
                 <td style="padding: 6px; text-align: right; font-family: monospace;">2K23/CSE/68</td>
             </tr>
-            <tr style="border-bottom: 1px solid #334155;">
+            <tr style="border-bottom: 1px solid #E2E8F0;">
                 <td style="padding: 6px;">Afia</td>
                 <td style="padding: 6px; text-align: right; font-family: monospace;">2K23/CSE/20</td>
             </tr>
@@ -92,22 +164,27 @@ st.markdown("""
                 <td style="padding: 6px; text-align: right; font-family: monospace;">2K23/CSE/153</td>
             </tr>
         </table>
-        <p style="margin: 10px 0 0 0; font-size: 13px; color: #94A3B8; text-align: center;"><b>AI Final Project</b> | BSCS (2K23-Batch) | AI Lab</p>
+        <p style="margin: 10px 0 0 0; font-size: 13px; color: #64748B; text-align: center;"><b>AI Final Project</b> | BSCS (2K23-Batch) | AI Lab</p>
     </div>
 """, unsafe_allow_html=True)
 
 st.write("---")
 
-# Sidebar Controls for Presentation Flexibility
+# 🛠️ SIDEBAR SECTION (Perfect Layout Order & Sidebar Controls)
 st.sidebar.header("🛠️ Simulation Control Panel")
 total_cycles = st.sidebar.slider("Number of Simulation Cycles", min_value=1, max_value=10, value=3)
 delay_speed = st.sidebar.slider("Execution Step Delay (Seconds)", min_value=0.5, max_value=3.0, value=1.5)
 
+# Primary Simulation Action Button
+start_sim = st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary")
+
 st.sidebar.write("---")
+
 st.sidebar.subheader("📐 System Weights Configuration")
 st.sidebar.info("As per project specifications, the optimization runs on a weighted utility model:")
 st.sidebar.latex(r"U = 0.7 \times \text{Flow} - 0.3 \times \text{Risk}")
 
+<<<<<<< HEAD
 # ---- Safe Data Loading with Exception Handling (Commit 3 changes) ----
 def load_traffic_sensor_data(sensor_id):
     try:
@@ -121,12 +198,25 @@ def load_traffic_sensor_data(sensor_id):
 
 # Testing error handling logic quietly
 sensor_status = load_traffic_sensor_data(sensor_id="North_Intersection")
+=======
+st.sidebar.write("---")
+
+st.sidebar.subheader("ℹ️ About Project")
+st.sidebar.markdown(
+    "<div style='background-color: #FFFFFF; padding: 12px; border-radius: 6px; border: 1px solid #CBD5E1; color: #334155; font-size: 13px; box-shadow: 0 2px 4px rgba(0,0,0,0.01);'>"
+    "This Smart Traffic AI System is designed to optimize traffic light timings using "
+    "advanced predictive analytics and dynamic logic density estimation."
+    "</div>", 
+    unsafe_allow_html=True
+)
+
+>>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
 # Initialize AI Core Components
 env = TrafficEnvironment()
 agent = SmartTrafficAgent()
 
 # Trigger Button for the Simulation Loop
-if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
+if start_sim:
     
     # Placeholders for Dynamic Real-Time UI Components
     status_text = st.empty()
@@ -179,24 +269,24 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
             avg_utility = round(sum(cumulative_utility) / len(cumulative_utility), 2)
             
             metric1.markdown(f"""<div class='metric-box'>
-                <h5 style='color: #94A3B8; margin:0;'>AVERAGE UTILITY SCORE</h5>
-                <h2 style='color: #38BDF8; margin:5px 0;'>✨ {avg_utility}</h2>
-                <span style='color: #4ADE80; font-size:12px;'>Target Max: 0.70</span>
+                <h5 style='color: #64748B; margin:0; font-size:12px; font-weight:bold;'>AVERAGE UTILITY SCORE</h5>
+                <h2 style='color: #0284C7; margin:5px 0;'>✨ {avg_utility}</h2>
+                <span style='color: #16A34A; font-size:12px; font-weight:bold;'>Target Max: 0.70</span>
             </div>""", unsafe_allow_html=True)
             
             metric2.markdown(f"""<div class='metric-box'>
-                <h5 style='color: #94A3B8; margin:0;'>EST. VEHICLES CLEARED</h5>
-                <h2 style='color: #4ADE80; margin:5px 0;'>🚗 {total_vehicles_cleared}</h2>
-                <span style='color: #94A3B8; font-size:12px;'>Throughput Accumulator</span>
+                <h5 style='color: #64748B; margin:0; font-size:12px; font-weight:bold;'>EST. VEHICLES CLEARED</h5>
+                <h2 style='color: #16A34A; margin:5px 0;'>🚗 {total_vehicles_cleared}</h2>
+                <span style='color: #64748B; font-size:12px;'>Throughput Accumulator</span>
             </div>""", unsafe_allow_html=True)
             
             metric3.markdown(f"""<div class='metric-box'>
-                <h5 style='color: #94A3B8; margin:0;'>CRITICAL RISK AVOIDANCES</h5>
-                <h2 style='color: #F87171; margin:5px 0;'>🛡️ {total_accidents_prevented}</h2>
-                <span style='color: #F87171; font-size:12px;'>Emergency Preemptions</span>
+                <h5 style='color: #64748B; margin:0; font-size:12px; font-weight:bold;'>CRITICAL RISK AVOIDANCES</h5>
+                <h2 style='color: #DC2626; margin:5px 0;'>🛡️ {total_accidents_prevented}</h2>
+                <span style='color: #DC2626; font-size:12px; font-weight:bold;'>Emergency Preemptions</span>
             </div>""", unsafe_allow_html=True)
 
-            # 🟢 STEP 1: RENDER GREEN PHASE FOR THE ACTIVE LANE
+            #  STEP 1: RENDER GREEN PHASE FOR THE ACTIVE LANE
             style_class = "lane-card lane-green"
             em_badge = "🚨 EMERGENCY PRIORITY ACTUATED" if lane_data['emergency_vehicle'] else "Normal Stream"
             blur_badge = "⚠️ Sensor Degraded (Partial Visibility)" if lane_data['partial_visibility_active'] else "🔒 Clear Visibility"
@@ -204,41 +294,41 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
             lane_placeholders[lane].markdown(f"""
                 <div class="{style_class}">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h4>📍 {lane} Lane Status</h4>
-                        <span style="background:#10B981; padding:3px 10px; border-radius:15px; font-size:12px; font-weight:bold;">🟢 SIGNAL: GREEN</span>
+                        <h4 style="margin:0; font-weight:bold;">📍 {lane} Lane Status</h4>
+                        <span style="background:#10B981; color:white; padding:3px 10px; border-radius:15px; font-size:12px; font-weight:bold;">🟢 SIGNAL: GREEN</span>
                     </div>
-                    <p style="margin: 5px 0;"><b>Queue Profile:</b> Observed {lane_data['observed_queue']} cars (Actual: {lane_data['actual_queue']}) | <i>{blur_badge}</i></p>
-                    <p style="margin: 5px 0;"><b>AI Execution:</b> Allotting <b>{decision['allocated_time']}s</b> green window due to <i>"{decision['reason']}"</i></p>
-                    <p style="margin: 0; font-size:13px; color:#A7F3D0;"><b>Performance Diagnostics:</b> Flow Optimization: {decision['flow_efficiency']} | Risk Metric: {decision['accident_risk']} | <b>Utility U: {decision['utility_score']}</b></p>
-                    <span style="font-size:11px; font-weight:bold; color:#F87171;">{em_badge}</span>
+                    <p style="margin: 5px 0; color:#334155;"><b>Queue Profile:</b> Observed {lane_data['observed_queue']} cars (Actual: {lane_data['actual_queue']}) | <i>{blur_badge}</i></p>
+                    <p style="margin: 5px 0; color:#334155;"><b>AI Execution:</b> Allotting <b>{decision['allocated_time']}s</b> green window due to <i>"{decision['reason']}"</i></p>
+                    <p style="margin: 0; font-size:13px; color:#065F46;"><b>Performance Diagnostics:</b> Flow Optimization: {decision['flow_efficiency']} | Risk Metric: {decision['accident_risk']} | <b>Utility U: {decision['utility_score']}</b></p>
+                    <span style="font-size:11px; font-weight:bold; color:#DC2626;">{em_badge}</span>
                 </div>
             """, unsafe_allow_html=True)
             
             time.sleep(delay_speed) # Simulate the duration passing
 
-            # 🟡 STEP 2: TRANSITION TO YELLOW PHASE
+            #  STEP 2: TRANSITION TO YELLOW PHASE
             style_class = "lane-card lane-yellow"
             lane_placeholders[lane].markdown(f"""
                 <div class="{style_class}">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h4>📍 {lane} Lane Status</h4>
-                        <span style="background:#F59E0B; padding:3px 10px; border-radius:15px; font-size:12px; font-weight:bold; color:black;">🟡 SIGNAL: YELLOW</span>
+                        <h4 style="margin:0; font-weight:bold;">📍 {lane} Lane Status</h4>
+                        <span style="background:#F59E0B; color:white; padding:3px 10px; border-radius:15px; font-size:12px; font-weight:bold;">🟡 SIGNAL: YELLOW</span>
                     </div>
-                    <p style="margin: 10px 0; color:#FCD34D;">⚠️ Clearing intersection. Actuators pulsing yellow warning indicators...</p>
+                    <p style="margin: 10px 0; color:#D97706; font-weight:500;">⚠️ Clearing intersection. Actuators pulsing yellow warning indicators...</p>
                 </div>
             """, unsafe_allow_html=True)
             
             time.sleep(0.8)
 
-            # 🔴 STEP 3: RESET BACK TO RED STATE
+            #  STEP 3: RESET BACK TO RED STATE
             style_class = "lane-card lane-red"
             lane_placeholders[lane].markdown(f"""
                 <div class="{style_class}">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h4>📍 {lane} Lane Status</h4>
-                        <span style="background:#EF4444; padding:3px 10px; border-radius:15px; font-size:12px; font-weight:bold;">🔴 SIGNAL: RED</span>
+                        <h4 style="margin:0; font-weight:bold;">📍 {lane} Lane Status</h4>
+                        <span style="background:#EF4444; color:white; padding:3px 10px; border-radius:15px; font-size:12px; font-weight:bold;">🔴 SIGNAL: RED</span>
                     </div>
-                    <p style="margin: 10px 0; color:#FCA5A5;">🔒 Stream closed. Holding vehicle grid queue steady.</p>
+                    <p style="margin: 10px 0; color:#991B1B;">🔒 Stream closed. Holding vehicle grid queue steady.</p>
                 </div>
             """, unsafe_allow_html=True)
             
@@ -256,11 +346,8 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
     st.write("---")
     st.subheader("📈 Post-Simulation AI System Behavior Analysis")
     
-    # Read the dataset generated from the system logs
     if pd.io.common.file_exists("traffic_simulation_logs.csv"):
         df = pd.read_csv("traffic_simulation_logs.csv")
-        
-        # Take the most recent logs relevant to the current session run
         df_recent = df.tail(total_cycles * 4)
         
         chart_cols = st.columns(2)
@@ -270,8 +357,12 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
                           barmode="group", title="AI Allocated Green Phase Duration per Lane",
                           labels={"Allocated_Green_Time": "Green Light Window (s)"},
                           color_discrete_map={"Yes": "#E11D48", "No": "#3B82F6"})
+<<<<<<< HEAD
  
 
+=======
+        fig_time.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+>>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
         chart_cols[0].plotly_chart(fig_time, use_container_width=True)
         
         # Chart 2: Utility Function Convergence Plot
@@ -279,6 +370,7 @@ if st.sidebar.button("⚡ Start AI Traffic Simulation", type="primary"):
                            title="System Mathematical Utility Curve Fluctuations",
                            labels={"Utility_Score": "Evaluated Utility Score (U)"})
         fig_util.update_traces(line_color="#10B981")
+        fig_util.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
         chart_cols[1].plotly_chart(fig_util, use_container_width=True)
         
         # Presenting raw logged telemetry files
