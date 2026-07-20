@@ -329,7 +329,7 @@ if start_sim:
             plot_bgcolor='rgba(0,0,0,0)',
             font=dict(color='#0F172A'),
             title_font=dict(color='#0F172A'),
-            legend=dict(font=dict(color='#0F172A')),
+            legend=dict(font=dict(color='#0F172A'), title=dict(font=dict(color='#0F172A'))),
             xaxis=dict(title_font=dict(color='#0F172A'), tickfont=dict(color='#0F172A')),
             yaxis=dict(title_font=dict(color='#0F172A'), tickfont=dict(color='#0F172A'))
         )
