@@ -22,12 +22,8 @@ st.set_page_config(
 # --- Welcome Subtitle (Aapki Commit) ---
 st.markdown("### 🚦 Welcome! Optimize and monitor traffic density in real-time.")
 
-<<<<<<< HEAD
-# Custom Glassmorphism CSS styling to impress the evaluator
 # Custom Glassmorphism & Custom Enhanced CSS styling (Commit 2 changes)
-=======
 # Custom Premium Light Theme Grid Styling (Forceful Button Visibility Fix)
->>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
 st.markdown("""
     <style>
     /* Main body changes to elegant light slate */
@@ -111,30 +107,6 @@ st.markdown("""
     h1, h2, h3, h4, h5, h6, p {
         color: #0F172A !important;
     }
-<<<<<<< HEAD
-    .lane-green { border-left: 6px solid #10B981 !important; background-color: rgba(16, 185, 129, 0.05); }
-    .lane-yellow { border-left: 6px solid #F59E0B !important; background-color: rgba(245, 158, 11, 0.05); }
-    .lane-red { border-left: 6px solid #EF4444 !important; background-color: rgba(239, 68, 68, 0.05); }
-    
-    /* Naye dynamic styles jo humne add kiye hain */
-    .stApp {
-        background-color: #0e1117; 
-        color: #ffffff;
-    }
-    .stButton>button {
-        color: #ffffff !important;
-        background-color: #ff4b4b !important; 
-        border-radius: 8px;
-        font-weight: bold;
-    }
-    .traffic-card {
-        border: 2px solid #31333f;
-        border-radius: 10px;
-        padding: 15px;
-        margin-bottom: 10px;
-    }
-=======
->>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
     </style>
 """, unsafe_allow_html=True)
 
@@ -184,7 +156,6 @@ st.sidebar.subheader("📐 System Weights Configuration")
 st.sidebar.info("As per project specifications, the optimization runs on a weighted utility model:")
 st.sidebar.latex(r"U = 0.7 \times \text{Flow} - 0.3 \times \text{Risk}")
 
-<<<<<<< HEAD
 # ---- Safe Data Loading with Exception Handling (Commit 3 changes) ----
 def load_traffic_sensor_data(sensor_id):
     try:
@@ -198,7 +169,7 @@ def load_traffic_sensor_data(sensor_id):
 
 # Testing error handling logic quietly
 sensor_status = load_traffic_sensor_data(sensor_id="North_Intersection")
-=======
+
 st.sidebar.write("---")
 
 st.sidebar.subheader("ℹ️ About Project")
@@ -210,7 +181,6 @@ st.sidebar.markdown(
     unsafe_allow_html=True
 )
 
->>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
 # Initialize AI Core Components
 env = TrafficEnvironment()
 agent = SmartTrafficAgent()
@@ -357,12 +327,7 @@ if start_sim:
                           barmode="group", title="AI Allocated Green Phase Duration per Lane",
                           labels={"Allocated_Green_Time": "Green Light Window (s)"},
                           color_discrete_map={"Yes": "#E11D48", "No": "#3B82F6"})
-<<<<<<< HEAD
- 
-
-=======
         fig_time.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
->>>>>>> 58d11cd (fix(ui): resolve sidebar collapse button visibility and premium light mode layout)
         chart_cols[0].plotly_chart(fig_time, use_container_width=True)
         
         # Chart 2: Utility Function Convergence Plot
@@ -376,12 +341,7 @@ if start_sim:
         # Presenting raw logged telemetry files
         st.subheader("📋 System Telemetry Captured Dataset")
         st.dataframe(df_recent, use_container_width=True)
-            # Sidebar info
-st.sidebar.title("About Project")
-st.sidebar.info(
-    "This Smart Traffic AI System is designed to optimize traffic light timings "
-    "using advanced computer vision and density estimation."
-)
+
 # ---- AI Prediction Model Section ----
 def predict_traffic_density(current_count, peak_hour=False):
     """
@@ -401,9 +361,3 @@ def predict_traffic_density(current_count, peak_hour=False):
 # Dashboard display logic
 prediction = predict_traffic_density(current_count=45, peak_hour=True)
 print(f"AI Prediction Status: {prediction}")
-    # Sidebar info
-st.sidebar.title("About Project")
-st.sidebar.info(
-    "This Smart Traffic AI System is designed to optimize traffic light timings "
-    "using advanced computer vision and density estimation."
-)
