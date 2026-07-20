@@ -19,9 +19,6 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded"
 )
-# --- Welcome Subtitle (Aapki Commit) ---
-st.markdown("### 🚦 Welcome! Optimize and monitor traffic density in real-time.")
-
 # Custom Glassmorphism & Custom Enhanced CSS styling (Commit 2 changes)
 # Custom Premium Light Theme Grid Styling (Forceful Button Visibility Fix)
 st.markdown("""
@@ -327,7 +324,15 @@ if start_sim:
                           barmode="group", title="AI Allocated Green Phase Duration per Lane",
                           labels={"Allocated_Green_Time": "Green Light Window (s)"},
                           color_discrete_map={"Yes": "#E11D48", "No": "#3B82F6"})
-        fig_time.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+        fig_time.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#0F172A'),
+            title_font=dict(color='#0F172A'),
+            legend=dict(font=dict(color='#0F172A')),
+            xaxis=dict(title_font=dict(color='#0F172A'), tickfont=dict(color='#0F172A')),
+            yaxis=dict(title_font=dict(color='#0F172A'), tickfont=dict(color='#0F172A'))
+        )
         chart_cols[0].plotly_chart(fig_time, use_container_width=True)
         
         # Chart 2: Utility Function Convergence Plot
@@ -335,7 +340,14 @@ if start_sim:
                            title="System Mathematical Utility Curve Fluctuations",
                            labels={"Utility_Score": "Evaluated Utility Score (U)"})
         fig_util.update_traces(line_color="#10B981")
-        fig_util.update_layout(paper_bgcolor='rgba(0,0,0,0)', plot_bgcolor='rgba(0,0,0,0)')
+        fig_util.update_layout(
+            paper_bgcolor='rgba(0,0,0,0)',
+            plot_bgcolor='rgba(0,0,0,0)',
+            font=dict(color='#0F172A'),
+            title_font=dict(color='#0F172A'),
+            xaxis=dict(title_font=dict(color='#0F172A'), tickfont=dict(color='#0F172A')),
+            yaxis=dict(title_font=dict(color='#0F172A'), tickfont=dict(color='#0F172A'))
+        )
         chart_cols[1].plotly_chart(fig_util, use_container_width=True)
         
         # Presenting raw logged telemetry files
